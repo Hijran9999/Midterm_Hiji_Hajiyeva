@@ -17,22 +17,12 @@ class NobelViewModel : ViewModel() {
     init {
         fetchPrizes()
     }
-//
-//    private fun fetchPrizes() {
-//        viewModelScope.launch {
-//            try {
-//                val response = RetrofitInstance.api.getNobelPrizes()
-//                _prizes.value = response.nobelPrizes
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//            }
-//        }
-//    }
+
 
     private fun fetchPrizes() {
         viewModelScope.launch {
             try {
-                val response = RetrofitInstance.api.getNobelPrizes()
+                val response = RetrofitInstance.api.getNobelPrizes() // packages response from API using RetrofitInstance
 
                 // Print the full response to console
                 Log.d("NobelAPI", "Response: $response")

@@ -15,15 +15,6 @@ fun Screen1(
     viewModel: NobelViewModel
 ) {
 
-//    Button(
-//        onClick = { navController.navigate("detail") },
-//        modifier = Modifier.fillMaxWidth()
-//    ) {
-//        Text("Go To Detail Screen")
-//    }
-//
-//    Spacer(modifier = Modifier.height(16.dp))
-//
     val prizes by viewModel.prizes.collectAsState()
 
     Column(

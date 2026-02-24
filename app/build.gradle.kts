@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     id("kotlin-parcelize")
+//    id("com.google.devtools.ksp")
+
 
 }
 
@@ -68,4 +70,6 @@ dependencies {
 
 // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
+    implementation("com.squareup.moshi:moshi:1.15.1")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
 }
